@@ -1,2 +1,2 @@
 # thes.ink
-Website for the Republic of The Sink
+Home website for the Republic of The Sink

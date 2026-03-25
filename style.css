@@ -1,0 +1,134 @@
+:root {
+    --main-bg-color: white;
+    --secondary-bg-color: #C5CDD1;
+    --nav-bg-color: #151515;
+    --main-text-color: black;
+    --top-text-color: white;
+    --top-highlight-color: white;
+    --top-active-color: darkslategrey;
+}
+
+body {
+    margin: 0px;
+    font-size: 16px; 
+    font-family: Verdana, Arial, sans-serif;
+    background-color: var(--secondary-bg-color);
+}
+
+p {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.nav, .navresponsive {
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+    color: var(--top-text-color);
+    background-color: var(--nav-bg-color);
+    overflow: auto;
+    text-decoration: none;
+    text-align: center;
+    min-height: 40px;
+}
+
+.nav a, .navresponsive a {
+    color: var(--top-text-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+}
+
+.nav a.active, .navresponsive a.active {
+    background-color: darkslategrey;
+}
+
+.nav a:hover, .navresponsive a:hover {
+    color: black;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav img {
+    border-radius: 4px;
+    object-fit: scale-down;
+    width: 20px;
+    height: 20px;
+}
+
+
+.main p, .main h1, .main h2, .main h3, .main h4, .main h5, .main h6, .main img, .main audio, .main label, .main iframe {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.main img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 75%;
+    border: 4px ridge;
+}
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90%;
+    height: 90%;
+    border: 4px ridge;
+
+}
+
+@media screen and (min-width: 1100px) {
+    .navToggle {
+        display: none;
+    }
+
+
+    .main {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 5%;
+        height: stretch;
+        background-color: var(--main-bg-color);
+        border-radius: 4px;
+        outline: 4px solid;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .nav a:not(.navToggle) {
+        display: none;
+    }
+
+    .main {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        background-color: var(--main-bg-color);
+        border-radius: 4px;
+        height: stretch;
+        outline: 4px solid;
+    }
+
+    .navToggle {
+        float: right;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+
+    .nav a {
+        text-align: center;
+        display: inline-block;
+    }
+
+    .navresponsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
