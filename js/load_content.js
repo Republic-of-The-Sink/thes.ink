@@ -32,6 +32,9 @@
     }
     // Append navigation menu toggle
     $('.nav').prepend(`<a href=\"javascript:void(0);\" class="navToggle" id="navToggle" onClick="toggleMenu()">Navigation☰</a >`);
+
+    // Put a <br/> at the end of each main div to pad it
+    $('.main').append('<br/>')
 });
 
 function toggleMenu() {

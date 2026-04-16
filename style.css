@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: white;
-    --secondary-bg-color: #C5CDD1;
+    --secondary-bg-color: #b5b4af;
     --nav-bg-color: #151515;
     --main-text-color: black;
     --top-text-color: white;
@@ -25,7 +25,7 @@ p {
     font-size: 20px;
     color: var(--top-text-color);
     background-color: var(--nav-bg-color);
-    overflow: auto;
+    overflow: hidden;
     text-decoration: none;
     text-align: center;
     min-height: 40px;
