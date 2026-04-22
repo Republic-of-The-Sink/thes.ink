@@ -6,23 +6,53 @@
     --top-text-color: white;
     --top-highlight-color: white;
     --top-active-color: darkslategrey;
+    --base-transition-time: 0.15s;
+    --base-font-size: 18px;
+}
+
+a:link {
+    color: cadetblue;
+}
+
+a:visited {
+    color: darkorchid;
+}
+
+footer {
+    margin: 0;
+    margin-top: 5%;
+    background-color: var(--nav-bg-color);
+    color: #b5b4af;
+    width: 100%;
+    /*display: flex;*/
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    text-align: center;
 }
 
 body {
     margin: 0px;
-    font-size: 16px; 
+    font-size: var(--base-font-size); 
     font-family: Verdana, Arial, sans-serif;
     background-color: var(--secondary-bg-color);
 }
 
+body {
+    background: repeating-linear-gradient(var(--secondary-bg-color));
+}
+
 p {
     font-family: Verdana, Arial, sans-serif;
-    font-size: 16px;
+    font-size: var(--base-font-size);
 }
 
 .nav, .navresponsive {
     font-family: monospace, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--top-text-color);
     background-color: var(--nav-bg-color);
     overflow: hidden;
@@ -35,11 +65,13 @@ p {
     color: var(--top-text-color);
     text-align: center;
     text-decoration: none;
-    padding: 16px 16px;
+    padding: 1em;
+    border: 2px solid white;
+    transition: var(--base-transition-time);
 }
 
 .nav a.active, .navresponsive a.active {
-    background-color: darkslategrey;
+    background-color: darkslateblue;
 }
 
 .nav a:hover, .navresponsive a:hover {
@@ -47,6 +79,8 @@ p {
     background-color: white;
     text-align: center;
     text-decoration: none;
+    transition: var(--base-transition-time);
+    transform: scale(120%);
 }
 
 .nav img {
@@ -56,17 +90,27 @@ p {
     height: 20px;
 }
 
+h1 {
+    padding-top: 2.5%;
+    text-align: center;
+}
 
-.main p, .main h1, .main h2, .main h3, .main h4, .main h5, .main h6, .main img, .main audio, .main label, .main iframe {
+main p, main h1, main h2, main h3, main h4, main h5, main h6, main img, main audio, main label, main iframe {
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
 
-.main img {
-    position: relative;
+main img {
+    /*position: relative;*/
+    /*
     top: 0px;
     left: 0px;
+    */
+    margin: auto;
     width: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     border: 4px ridge;
 }
 
@@ -85,15 +129,15 @@ iframe {
         display: none;
     }
 
-
-    .main {
+    main {
         margin-left: 15%;
         margin-right: 15%;
         margin-top: 5%;
         height: stretch;
         background-color: var(--main-bg-color);
-        border-radius: 4px;
+        border-radius: 8px;
         outline: 4px solid;
+        min-height: 80vh;
     }
 
 }
@@ -104,14 +148,15 @@ iframe {
         display: none;
     }
 
-    .main {
+    main {
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 5%;
         background-color: var(--main-bg-color);
-        border-radius: 4px;
+        border-radius: 8px;
         height: stretch;
         outline: 4px solid;
+        min-height: 90vh;
     }
 
     .navToggle {
@@ -132,3 +177,11 @@ iframe {
         text-align: center;
     }
 }
+
+blockquote {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+

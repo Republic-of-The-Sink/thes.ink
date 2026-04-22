@@ -7,8 +7,9 @@
         ['/pages/faq.html', 'FAQs']
     ];
 
+    // TODO: Replace all selectors to nav class with nav tag
     // $('body').prepend('<div class="nav" id="nav"></div>');
-    $('body').prepend(`<div class="nav" id="nav"></div>`);
+    $('body').prepend(`<nav class="nav" id="nav"></nav>`);
 
     // $('head').append();
     // $('#nav').load('/templates/nav.html');
@@ -34,7 +35,9 @@
     $('.nav').prepend(`<a href=\"javascript:void(0);\" class="navToggle" id="navToggle" onClick="toggleMenu()">Navigation☰</a >`);
 
     // Put a <br/> at the end of each main div to pad it
-    $('.main').append('<br/>')
+    $('main').append('<br/>');
+    // Footer
+    $('body').append('<footer><p>Website made with <3 by xad1561 <br> No generative AI was used in the making of this website</p></footer>');
 });
 
 function toggleMenu() {
