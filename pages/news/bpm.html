@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>How to *actually* get the BPM of songs</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="/js/load_content.js"></script>
+    <meta name="description" content="A couple ways to find the BPM of songs that actually work">
+    <meta name="author" content="xad1561">
+</head>
+<body id="body">
+    <main>
+        <h1>How to *actually* get the BPM of songs</h1>
+        <p class="centered"><i>Written by xad1561<br>July 17, 2026</i></p>
+        <p>
+            A few days ago I figured out a couple methods for how to pretty quickly get the BPM of a song, and people probably want to know how, so here you go. In no way do I claim to be even remotely an expert on music, so there are probably easier or better ways out there, but I have found these methods to work very well.
+        </p>
+
+        <h2>Method A: Using Audacity</h2>
+        <p>
+           You&apos;ll need to use <a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer">Audacity</a> for this method, so make sure you have it installed before continuing.
+        </p>
+        
+        <p>
+            Firstly, you&apos;ll want to import your desired song into Audacity by dragging it in. 
+        </p>
+        <img src="/assets/images/news/bpm/bpm_1.png">
+        <p>
+            Next, you need to find two beats to use as a measuring stick. You can do this by looking for two audio &quot;peaks&quot; and making a selection between them.
+        </p>
+        <img src="/assets/images/news/bpm/bpm_2.png">
+        <p>
+            Zoom in on the end of your selection and note the time where it ends, then do the same for the start of the selection.
+        </p>
+        <img src="/assets/images/news/bpm/bpm_3.png" style="width: 50%;">
+        <p>
+            Now subtract the number for the start from the number for the end to get the time between beats, then divide 60 by that to get a close estimate of the BPM. <br>
+            For the song I&aposm using for demonstration, this would be calculated like: <br>
+            0.4716 - 0.02679 = <b>0.44481</b>
+            60 / 0.444881 = <b>134.88905</b>
+        </p>
+        <p>
+            The BPM we calculated is very close to the actual BPM. We will now round up to 135 and check using Audacity&apos;s Rhythm Track function under Generate at the top toolbar.
+        </p>
+        <img src="/assets/images/news/bpm/bpm_7.png" style="width: 70%">
+        <p>
+            This will open a menu where you can customize various aspects of the rhythm track, but for now just punch in the rounded BPM you got in the previous step and make sure it runs for a decent number of measures.
+        </p>
+        <img src="/assets/images/news/bpm/bpm_8.png" style="width: 50%">
+        <p>
+            The generated metronome track may not be properly aligned with the song, so move it around as needed to make sure the first beat is properly synced up. If you did everything correctly, the rhythm track should be synced up with the rest of the song. If the metronome desyncs, then you got it wrong. The earlier it desyncs, the more you got it wrong. Remove the old rhythm track and generate new ones at different BPMs to guess and check until you find the correct tempo.
+        </p>
+        <img src="/assets/images/news/bpm/bpm_9.png">
+        <p>
+            Once you are sure you have the right BPM for your song, you can then remove all audio tracks, change the tempo in the bottom left to the correct BPM, then reimport your song.
+        </p>
+
+        <p>
+            Some songs will have weird BPMs that go into the decimal places, which can be tricky to find ourselves with this method. Fortunately, we have the dark side of the force to help us in the form of
+        </p>
+
+        <h2>Method B: Searching on <i>Osu!</i> (faster but less honorable than finding it yourself)</h2>
+        <p>
+            <i>Osu!</i> is a rhythm game, but we don&apos;t exactly care about the whole rhythm game part that much. We do care that people produce custom beatmaps for it, which means that they have already found the exact tempo of a lot of different songs down to the hundredth of a BPM. Instead of Googling the BPM for a song if you can&apos;t find it yourself, search for the beatmap on <i>Osu!</i> instead. Seriously, it works a lot better than you would expect.
+        </p>
+
+        <p>
+            Most sites that offer the BPMs for songs do a very bad job of actually helping you with the BPM because they are either just plain wrong or only offer it to the nearest whole number, unlike the <i>Osu!</i> beatmap list, where if someone doesn&apos;t find the exact beats per minute right they will be beat up within a minute (I might be exaggerating a little with that last part but you get the point).
+        </p>
+
+        <br>
+        <p>
+            In conclusion: don&apos;t scroll Instagram Reels. Use the knowledge I have bestowed upon you to make crappy mashups like this instead:
+        </p>
+        <iframe width="90%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2362579400&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/the-sink-24515353" title="the sink" target="_blank" style="color: #cccccc; text-decoration: none;">the sink</a> · <a href="https://soundcloud.com/the-sink-24515353/death-by-dein-lieblingsfach" title="Death by dein Lieblingsfach" target="_blank" style="color: #cccccc; text-decoration: none;">Death by dein Lieblingsfach</a></div>
+
+
+        <h2></h2>
+    </main>
+</body>

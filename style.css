@@ -1,6 +1,11 @@
 :root {
-    --main-bg-color: white;
+    --main-bg-color: #ededed;
     --secondary-bg-color: #b5b4af;
+    /*--tertiary-bg-color-a: #002358;
+    --tertiary-bg-color-b: #805280;*/
+    --tertiary-bg-color-a: #b5b4af;
+    --tertiary-bg-color-b: #a1a1a1;
+    --img-border-color: #74adc2;
     --nav-bg-color: #151515;
     --main-text-color: black;
     --top-text-color: white;
@@ -37,17 +42,33 @@ footer {
 body {
     margin: 0px;
     font-size: var(--base-font-size); 
-    font-family: Verdana, Arial, sans-serif;
+    font-family: "Electrolize", Verdana, Arial, sans-serif;
     background-color: var(--secondary-bg-color);
+    letter-spacing: 0.05rem;
+    font-weight: 200;
 }
 
+/* Background for the body */
 body {
-    background: repeating-linear-gradient(var(--secondary-bg-color));
+    background-image: repeating-linear-gradient(45deg, transparent 0, transparent 0 80px, var(--tertiary-bg-color-a) 0, var(--tertiary-bg-color-a) 0 90px), repeating-linear-gradient(-45deg, transparent 0, transparent 0 80px, var(--tertiary-bg-color-b) 0, var(--tertiary-bg-color-b) 0 90px);
+}
+
+#path {
+    text-align: center;
+    margin: none;
+}
+
+#path a{
+    text-transform: capitalize;
 }
 
 p {
-    font-family: Verdana, Arial, sans-serif;
+    font-family: "Electrolize", Verdana, Arial, sans-serif;
     font-size: var(--base-font-size);
+}
+
+.nav {
+    padding-top: 0.5em;
 }
 
 .nav, .navresponsive {
@@ -74,13 +95,11 @@ p {
     background-color: darkslateblue;
 }
 
-.nav a:hover, .navresponsive a:hover {
+.nav a:hover, .navresponsive a:hover, #back:hover {
     color: black;
     background-color: white;
-    text-align: center;
-    text-decoration: none;
     transition: var(--base-transition-time);
-    transform: scale(120%);
+    /*transform: scale(120%);*/
 }
 
 .nav img {
@@ -91,11 +110,12 @@ p {
 }
 
 h1 {
-    padding-top: 2.5%;
+    padding-top: 0%;
     text-align: center;
 }
 
 main p, main h1, main h2, main h3, main h4, main h5, main h6, main img, main audio, main label, main iframe {
+    margin-top: 0%;
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
@@ -107,14 +127,17 @@ main img {
     left: 0px;
     */
     margin: auto;
-    width: 75%;
+    margin-bottom: 1%;
+    width: 60vw;
+    height: auto;
+    /*max-width: 60vw;*/
     display: flex;
     justify-content: center;
     align-content: center;
-    border: 4px ridge;
+    border: 8px ridge var(--img-border-color);
 }
 
-iframe {
+/*iframe {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -122,6 +145,43 @@ iframe {
     height: 90%;
     border: 4px ridge;
 
+}*/
+
+main #back {
+    display: block;
+    position: relative;
+    color: var(--top-text-color);
+    background-color: var(--nav-bg-color);
+    width: 10%;
+    text-align: center;
+    padding: 0.5em;
+    margin: none;
+    border-radius: 8px 0px 8px 0px;
+    top: -2.2em;
+}
+
+/* Cards for the news page */
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container .card {
+    margin: 1% 5% 1% 5%;
+    height: 15vh;
+    width: 90%;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border: 0.25rem solid var(--nav-bg-color);
+    border-radius: 8px;
+    text-align: left; 
+}
+
+.card-container a {
+    margin: 5%;    
 }
 
 @media screen and (min-width: 1100px) {
@@ -132,12 +192,13 @@ iframe {
     main {
         margin-left: 15%;
         margin-right: 15%;
-        margin-top: 5%;
+        margin-top: 2%;
         height: stretch;
         background-color: var(--main-bg-color);
         border-radius: 8px;
         outline: 4px solid;
-        min-height: 80vh;
+        min-height: 90vh;
+        box-shadow: 8px 8px 8px 8px black;
     }
 
 }
@@ -146,6 +207,10 @@ iframe {
 
     .nav a:not(.navToggle) {
         display: none;
+    }
+
+    .card-container .card {
+        height: 25vh;
     }
 
     main {
@@ -176,12 +241,56 @@ iframe {
         display: block;
         text-align: center;
     }
+
+    .nav {
+        padding-top: 0px;
+    }
+
+    main img {
+        width: 80vw;
+    }
 }
 
-blockquote {
+@media screen and (max-width: 600px) {
+    main {
+        margin-left: 0;
+        margin-right: 0;
+        border: none;
+        outline: none;
+        background-color: var(--main-bg-color);
+        height: stretch;
+        min-height: 90vh;
+    }
+
+    .card-container .card {
+        height: 60vh;
+    }
+
+    main img {
+        width: 90vw;        
+    }
+
+    main #back {
+        display: none;
+    }
+
+}
+
+/* Block Quotation and unordered list */
+blockquote, ul {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
+}
+
+/* Useful stuff */
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+
+.noborder {
+    border: none;
 }
 
