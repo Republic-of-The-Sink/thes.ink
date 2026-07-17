@@ -7,7 +7,7 @@
     ];
 
     // TODO: Replace all selectors to nav class with nav tag
-    $('body').prepend(`<nav class="nav"></nav>`);
+    $('body').prepend(`<nav class="nav" id="nav"></nav>`);
     $('head').prepend(`<link rel="stylesheet" href="/style.css"><link rel="icon" href="/assets/icon.png">`);
     $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8">');
     $('head').append(`<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">`);
